@@ -5,6 +5,7 @@ module.exports = gql`
         id: ID!
         name: String!
         password: String!
+        isadmin: Boolean!
     }
 
     extend type Query {
@@ -12,7 +13,7 @@ module.exports = gql`
     }
 
     extend type Mutation {
-        newUser(name: String! password: String!): User!
+        newUser(name: String! password: String! isadmin: Boolean!): User!
         deleteUser(id: ID!): User
     }
 `

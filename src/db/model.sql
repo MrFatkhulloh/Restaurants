@@ -26,6 +26,7 @@ CREATE TABLE users(
     user_id UUID DEFAULT uuid_generate_v4() not null,
     user_name varchar(64),
     user_password varchar(64),
+    isadmin BOOLEAN NOT NULL,
     PRIMARY KEY (user_id)
 );
 
